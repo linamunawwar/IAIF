@@ -1,18 +1,36 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ListContact from './components/Contact';
+import NavbarKu from './components/NavbarKu';
 
 class App extends Component {
+  state = {
+    contacts : [
+      {
+        name    :'Mirza Chilman Garin'    ,
+        email   :'mirzachilman@gmail.com' ,
+        objectId: 0                       ,
+        image   : 'https://source.unsplash.com/random/500x500'  
+      },
+      {
+        name    :'Difa Gustia'            ,
+        email   :'difa@gmail.com'         ,
+        objectId: 1                       ,
+        image   : 'https://source.unsplash.com/random/500x500'  
+      },
+      {
+        name    :'Adit Nugroho'           ,
+        email   :'aditnugroho@gmail.com'  ,
+        objectId: 2                       ,
+        image   : 'https://source.unsplash.com/random/500x500'  
+      },
+    ]
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='App'>
+        <NavbarKu/>
+        <ListContact contacts={this.state.contacts} />
       </div>
     );
   }
