@@ -20,6 +20,12 @@ Anggap saja sebuah web kita terdiri dari `component`. `component navbar`, `compo
 
 Syntax yang digunakan pada react adalah syntax yang dinamakan dengan JSX (JavaScript XML) singkatnya adalah sebuah syntax javascript yang memungkinkan kita untuk menulis HTML di dalam javascript.
 
+## Environemnt
+
+- Standarisasi script dalam membangun aplikasi ini menggunakan javascript ES6
+- Precompiler yang dipakai menggunakan `Babel`
+- IDE atau text editor yang di pakai bebas apa saja tapi untuk memudahkan disarankan untuk menginstall theme atau color scheme `monokai` atau `oceanic`
+
 ## pemahaman lebih lanjut tentang component
 
-untuk memahami sedikit tentang komponen bisa di lihat pada `src/components/navbar` dan `src/components/contact`
+untuk memahami sedikit tentang komponen bisa di lihat pada `src/components/navbar` dan `src/components/contact`. Perlu di perhatikan navbar adalah `statefull component` atau yang biasa disebut `class` sedangkan contact adalah `stateless component` atau `functional component`
