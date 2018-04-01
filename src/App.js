@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Link } from 'react-router-dom';
-import Home from './components/Home';
-import NewsDetail from './components/NewsDetail';
-import NavbarKu from './components/NavbarKu';
-import './App.css'
+import { Route, Link }      from 'react-router-dom';
+/*import Home               from './components/Home';*/
+import NewsDetail           from './components/NewsDetail';
+import NavbarKu             from './components/NavbarKu';
+import ListContact          from './components/ListContact';
+import ListNews             from './components/ListNews';
+import Aux                  from './hoc/Auxiliary';
+import                           './App.css';
 
 class App extends Component {
   state = {
@@ -49,21 +52,36 @@ class App extends Component {
         createdDateTime: '4 April 2018',
         image   : 'https://source.unsplash.com/random/500x500'  
       }
-    ]
+    ],
+
+    screen:''
+
   }
 
   render() {
     return (
-      <BrowserRouter>
+      
         <div className='App'>
           <NavbarKu/>
-
-          <Route exact path='/' component={Home}/>
-          <Route exact path='/news/:id' component={NewsDetail}/>        
+          <Route exact path="/" render={ () => (
+              <Aux>
+                <ListNews     news    ={this.state.news}      />
+                <ListContact  contacts={this.state.contacts}  />
+              </Aux>
+            )}
+          />
+          <Route path="/news" render={ () => (
+              <NewsDetail/>
+            )}
+          /> 
         </div>
-      </BrowserRouter>  
+        
     );
   }
 }
 
 export default App;
+
+{/*<NewsDetail/>*/}
+{/*<Route exact path='/' component={Home}/>*/}
+{/*<Route exact path='/news/:id' component={NewsDetail}/>*/}  

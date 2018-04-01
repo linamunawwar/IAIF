@@ -9,6 +9,8 @@ body{
   font-family: arial !important;
 }
 
+
+/* App */
 .App {
   text-align: center;
 }
@@ -31,7 +33,8 @@ body{
 
 .App-intro {
   font-size: large;
-}
+}/* /#end-of-app */
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
@@ -111,8 +114,11 @@ body{
     .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
           color: #333;
     }
-}
+}/* /#navbar-end */
 
+/* ===== Custom Css ==== */
+
+ /* News */
 .news-box{
   text-align: left;
 }
@@ -160,6 +166,25 @@ body{
   background-color: #3F9BE7;
 }
 
+.news-detail .news-detail-date{
+  font-style: italic;
+  font-size: 10pt;
+  color: #696969;
+}
+
+.news-section{
+  margin-bottom: 20px;
+}
+
+.news-section .label-box{
+  background-color: #fff;
+  opacity: 0.9;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+}/* /#news-end */
+
+/* Section */
 .section-title{
   font-size: 20pt;
   text-align: left;
@@ -170,8 +195,9 @@ body{
 .section-pad{
   padding-top: 50px;
   padding-bottom: 50px;
-}
+}/* /#section-end  */
 
+/* Contact */
 .contact-box{
   border: 1px solid #e6e6e6;
   margin-left: 0px !important;
@@ -220,8 +246,9 @@ body{
 
 .contact-search-box input:focus{
   width:100% !important;
-}
+} /* /#contact-end */
 
+/* Dashboard */
 .dashboard-frame{
   padding:20px;
   background-color: #3F9BE7;
@@ -236,31 +263,15 @@ body{
 .dashboard-frame .dashboard-label{
   color:#f2f2f2;
   font-size: 12pt;
-}
+} /* /#dashboard-end */
+
 
 .full-btn{
   width: 100% !important;
   border-radius: 0px;
 }
 
-.news-detail .news-detail-date{
-  font-style: italic;
-  font-size: 10pt;
-  color: #696969;
-}
-
-.news-section{
-  margin-bottom: 20px;
-}
-
-.news-section .label-box{
-  background-color: #fff;
-  opacity: 0.9;
-  position: absolute;
-  bottom: 0;
-  padding: 5px;
-}
-
+/* Label */
 .label-box h5{
   font-size:10pt;
   margin-bottom: 0px !important;
@@ -268,10 +279,11 @@ body{
 
 .label-box a{
   font-size:9pt;
-}
+}/* /#label-end */
 
+/* MEDIA QUERY */
 @media only screen and (max-width: 768px) {
     .contact-search-box{
       margin-top:20px;
     }
-}
+}/* /#media-query */

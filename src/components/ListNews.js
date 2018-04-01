@@ -29,8 +29,7 @@ const ListNews = (props) => {
 				        <CardBody>
 				          <CardTitle>{data.title}</CardTitle>
 				          <CardText>{ data.body }</CardText>		
-				          <Link to="/news/2"><Button color='primary' size="sm">Read more</Button></Link>	          
-				          
+				          <Link to="/news"><Button color='primary' size="sm">Read more</Button></Link>	          
 				        </CardBody>
 				    </Card>
 				</div>

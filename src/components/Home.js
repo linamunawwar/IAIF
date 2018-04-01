@@ -1,8 +1,8 @@
-import React from 'react';
-import ListContact from './Contact';
-import ListNews from './News';
+import React, { Component } from 'react';
+import ListContact from './ListContact';
+import ListNews from './ListNews';
 
-class Home extends React.Component {
+class Home extends Component {
     constructor(props){
       super(props);
 
@@ -57,7 +57,7 @@ class Home extends React.Component {
       return (
         <div>
          <ListNews news={this.state.news} />
-          <ListContact contacts={this.state.contacts} />
+         <ListContact contacts={this.state.contacts} />
           </div>
       );
    }
