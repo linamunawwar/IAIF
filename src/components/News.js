@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
 	Card, 
 	CardImg, 
@@ -20,13 +21,16 @@ const ListNews = (props) => {
 				<div className='col-md-4 news-box' key={data.objectId}>
 					<Card >
 						<div className="news-date">
-				          	{ data.createdDateTime }
-				          </div>
-				        <CardImg top width="100%" src={data.image} alt="Card image cap" />
+			          		{ data.createdDateTime }
+			          	</div>
+			          	<div className='news-img-frame'>
+			          		<CardImg top width="100%" src={data.image} alt="Card image cap" />
+			          	</div>			        
 				        <CardBody>
 				          <CardTitle>{data.title}</CardTitle>
-				          <CardText>{ data.body }</CardText>			          
-				          <Button color='primary' size="sm">Read more</Button>
+				          <CardText>{ data.body }</CardText>		
+				          <Link to="/news/2"><Button color='primary' size="sm">Read more</Button></Link>	          
+				          
 				        </CardBody>
 				    </Card>
 				</div>
