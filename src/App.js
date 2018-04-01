@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
-import ListContact from './components/Contact';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+import Home from './components/Home';
+import NewsDetail from './components/NewsDetail';
 import NavbarKu from './components/NavbarKu';
+import './App.css'
 
 class App extends Component {
   state = {
@@ -23,15 +26,42 @@ class App extends Component {
         objectId: 2                       ,
         image   : 'https://source.unsplash.com/random/500x500'  
       },
+    ],
+    news : [
+      {
+        title    :'Lowongan Kerja Bulan April',
+        body   :'lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet' ,
+        objectId: 0                       ,
+        createdDateTime: '4 April 2018',
+        image   : 'https://source.unsplash.com/random/500x500' 
+      },
+      {
+        title    :'Gathering',
+        body   :'lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet' ,
+        objectId: 0                       ,
+        createdDateTime: '4 April 2018',
+        image   : 'https://source.unsplash.com/random/500x500'  
+      },
+      {
+        title    :'Node JS',
+        body   :'lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet' ,
+        objectId: 0                       ,
+        createdDateTime: '4 April 2018',
+        image   : 'https://source.unsplash.com/random/500x500'  
+      }
     ]
   }
 
   render() {
     return (
-      <div className='App'>
-        <NavbarKu/>
-        <ListContact contacts={this.state.contacts} />
-      </div>
+      <BrowserRouter>
+        <div className='App'>
+          <NavbarKu/>
+
+          <Route exact path='/' component={Home}/>
+          <Route exact path='/news/:id' component={NewsDetail}/>        
+        </div>
+      </BrowserRouter>  
     );
   }
 }
