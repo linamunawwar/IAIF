@@ -7,6 +7,7 @@
     - arahkan ke folder root Apps (./web-iaif)
     - jalankan perintah `npm install`
     - jalankan perintah `npm start`
+    - kalo ada error, hapus dulu dir node_modules
 Selamat Berkoding
 
 
