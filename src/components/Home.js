@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
-import { Route, Link }      from 'react-router-dom';
-/*import Home               from './components/Home';*/
-import NewsDetail           from './components/NewsDetail';
-import NavbarKu             from './components/NavbarKu';
-import ListContact          from './components/ListContact';
-import ListNews             from './components/ListNews';
-import Aux                  from './hoc/Auxiliary';
-import                           './App.css';
+import ListContact from './ListContact';
+import ListNews from './ListNews';
 
-class App extends Component {
-  state = {
+class Home extends Component {
+    constructor(props){
+      super(props);
+
+      this.state = {
     contacts : [
       {
         name    :'Mirza Chilman Garin'    ,
@@ -34,54 +31,36 @@ class App extends Component {
       {
         title    :'Lowongan Kerja Bulan April',
         body   :'lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet' ,
-        objectId: 0                       ,
+        objectId: 1                       ,
         createdDateTime: '4 April 2018',
         image   : 'https://source.unsplash.com/random/500x500' 
       },
       {
         title    :'Gathering',
         body   :'lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet' ,
-        objectId: 0                       ,
+        objectId: 2                      ,
         createdDateTime: '4 April 2018',
         image   : 'https://source.unsplash.com/random/500x500'  
       },
       {
         title    :'Node JS',
         body   :'lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet lorem ipsum dolor sir amet' ,
-        objectId: 0                       ,
+        objectId: 3                       ,
         createdDateTime: '4 April 2018',
         image   : 'https://source.unsplash.com/random/500x500'  
       }
-    ],
-
-    screen:''
-
+    ]
   }
+    }
 
-  render() {
-    return (
-      
-        <div className='App'>
-          <NavbarKu/>
-          <Route exact path="/" render={ () => (
-              <Aux>
-                <ListNews     news    ={this.state.news}      />
-                <ListContact  contacts={this.state.contacts}  />
-              </Aux>
-            )}
-          />
-          <Route path="/news" render={ () => (
-              <NewsDetail/>
-            )}
-          /> 
-        </div>
-        
-    );
-  }
+   render() {
+      return (
+        <div>
+         <ListNews news={this.state.news} />
+         <ListContact contacts={this.state.contacts} />
+          </div>
+      );
+   }
 }
 
-export default App;
-
-{/*<NewsDetail/>*/}
-{/*<Route exact path='/' component={Home}/>*/}
-{/*<Route exact path='/news/:id' component={NewsDetail}/>*/}  
+export default Home;
