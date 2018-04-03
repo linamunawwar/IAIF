@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Link }      from 'react-router-dom';
+import { Route }      from 'react-router-dom';
 /*import Home               from './components/Home';*/
 import NewsDetail           from './components/NewsDetail';
 import NavbarKu             from './components/NavbarKu';
@@ -65,8 +65,8 @@ class App extends Component {
           <NavbarKu/>
           <Route exact path="/" render={ () => (
               <Aux>
-                <ListNews     news    ={this.state.news}      />
                 <ListContact  contacts={this.state.contacts}  />
+                <ListNews     news    ={this.state.news}      />
               </Aux>
             )}
           />
@@ -81,7 +81,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/*<NewsDetail/>*/}
-{/*<Route exact path='/' component={Home}/>*/}
-{/*<Route exact path='/news/:id' component={NewsDetail}/>*/}  
