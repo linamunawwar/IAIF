@@ -2,18 +2,6 @@ import React from 'react';
 import NewsSection from './NewsSection';
 
 class NewsDetail extends React.Component {
-	constructor(props) {
-    	super(props);
-
-    	//this.state = {'news' : {}};
-
-    	/*console.log(this.props.match.params.id);*/
-  	}
-
-  	componentDidMount() {
-	   //this.setState({ news: this.props.news })
-  	}
-
    render() {
       return (
          <div className='container section-pad'>
@@ -22,7 +10,7 @@ class NewsDetail extends React.Component {
          			<NewsSection></NewsSection>
          		</div>
          		<div className='col-sm-9 news-detail' align='left'>
-         			<img src='https://learnenglishorstarve.files.wordpress.com/2017/06/news-tsodotcom.jpg' className='img-fluid'/>
+         			<img alt="" src='https://learnenglishorstarve.files.wordpress.com/2017/06/news-tsodotcom.jpg' className='img-fluid'/>
          			<div className='news-detail-date' align='right'>
          				14:56, 4 April 2018
          			</div>

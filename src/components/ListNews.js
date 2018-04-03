@@ -5,21 +5,20 @@ import {
 	CardImg, 
 	CardText, 
 	CardBody,
-  	CardTitle, 
-  	CardSubtitle, 
+  	CardTitle,  
   	Button } from 'reactstrap';
 
 
 const ListNews = (props) => {
 	return(
 		<div className='container'>
-		<div className="section-title">
-			Berita Terbaru
-		</div>
+			<div className="section-title">
+				Berita Terbaru
+			</div>
 			<div className='row'>
 			{ props.news.map( (data) =>  
 				<div className='col-md-4 news-box' key={data.objectId}>
-					<Card >
+					<Card className="mb-4">
 						<div className="news-date">
 			          		{ data.createdDateTime }
 			          	</div>

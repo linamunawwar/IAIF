@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
-import { Route, Link }      from 'react-router-dom';
+import { Route }      from 'react-router-dom';
 /*import Home               from './components/Home';*/
 import NewsDetail           from './components/NewsDetail';
+import ContactDetail           from './components/ContactDetail';
 import NavbarKu             from './components/NavbarKu';
 import ListContact          from './components/ListContact';
 import ListNews             from './components/ListNews';
+import Login             from './components/Login';
+import SignUp             from './components/SignUp';
 import Aux                  from './hoc/Auxiliary';
 import                           './App.css';
 
@@ -65,13 +68,28 @@ class App extends Component {
           <NavbarKu/>
           <Route exact path="/" render={ () => (
               <Aux>
-                <ListNews     news    ={this.state.news}      />
                 <ListContact  contacts={this.state.contacts}  />
+                <ListNews     news    ={this.state.news}      />
               </Aux>
             )}
           />
           <Route path="/news" render={ () => (
               <NewsDetail/>
+            )}
+          /> 
+
+          <Route path="/alumni" render={ () => (
+              <ContactDetail/>
+            )}
+          /> 
+
+          <Route path="/login" render={ () => (
+              <Login/>
+            )}
+          /> 
+
+          <Route path="/signup" render={ () => (
+              <SignUp/>
             )}
           /> 
         </div>
@@ -81,7 +99,3 @@ class App extends Component {
 }
 
 export default App;
-
-{/*<NewsDetail/>*/}
-{/*<Route exact path='/' component={Home}/>*/}
-{/*<Route exact path='/news/:id' component={NewsDetail}/>*/}  

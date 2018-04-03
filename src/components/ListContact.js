@@ -36,7 +36,7 @@ class ListContact extends Component {
 
 		return(
 			<div className='container section-pad'>
-			{JSON.stringify( query )}
+				{/*<pre><code>{JSON.stringify( query )}</code></pre>*/}
 				<div className="section-title">
 					Cari Alumni
 				</div>
@@ -44,7 +44,7 @@ class ListContact extends Component {
 					<div className='col-sm-3' align='left'>
 						<div className='dashboard-frame' align='right'>
 							
-							{ showingContacts.length == contacts.length && (
+							{ showingContacts.length === contacts.length && (
 								<div className='dashboard-number'>
 									<span>{showingContacts.length} dari {contacts.length}</span>
 								</div>
