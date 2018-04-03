@@ -268,7 +268,75 @@ body{
 
 .full-btn{
   width: 100% !important;
-  border-radius: 0px;
+  border-radius: 0px !important;
+}
+
+.btn-submit{
+  margin-top: 15px !important;
+}
+
+.all-blue-bg{
+  position: relative;
+  height: 100vh !important;
+  background: #3F9BE7; /* Just to visualize the extent */
+}
+
+.form-box{
+  background-color: #fff;
+  border: 1px solid #bdbdbd;
+  padding: 40px;
+}
+
+.form-control{
+  border-radius: 0px !important;
+}
+
+.contact-section{
+  background-color: #fff;
+  padding:10px;
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+}
+
+.contact-section:hover{
+  background-color: #C2E3FF;
+  padding:10px;
+}
+
+.contact-section img{
+  border-radius: 50%;
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+}
+
+.contact-section img:hover{
+  transform: rotate(360deg);
+}
+
+.contact-section h5{
+  margin-top: 5px;
+  font-size:12pt;
+  font-weight: bold;
+}
+
+.contact-section .contact-work{
+  font-size:10pt;
+  color:#696969;
+}
+
+.contact-detail h2{
+  margin-bottom: 0px !important;
+}
+
+.contact-detail .email{
+  color:#224E73;
+}
+
+.jobs-history{
+  border:1px solid #e6e6e6;
+  box-shadow: 1px 1px 2px #bdbdbd;
+  padding:20px;
+  margin-bottom: 20px;
 }
 
 /* Label */

@@ -40,7 +40,10 @@ import {
               <NavItem>
                 <NavLink href="/alumni/">Alumni</NavLink>
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
+              <NavItem>
+                <NavLink href="/login/">Login</NavLink>
+              </NavItem>
+              {/*<UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Options
                 </DropdownToggle>
@@ -56,7 +59,7 @@ import {
                     Reset
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </UncontrolledDropdown>*/}
             </Nav>
           </Collapse>
         </Navbar>

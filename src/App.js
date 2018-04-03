@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { Route, Link }      from 'react-router-dom';
 /*import Home               from './components/Home';*/
 import NewsDetail           from './components/NewsDetail';
+import ContactDetail           from './components/ContactDetail';
 import NavbarKu             from './components/NavbarKu';
 import ListContact          from './components/ListContact';
 import ListNews             from './components/ListNews';
+import Login             from './components/Login';
+import SignUp             from './components/SignUp';
 import Aux                  from './hoc/Auxiliary';
 import                           './App.css';
 
@@ -72,6 +75,21 @@ class App extends Component {
           />
           <Route path="/news" render={ () => (
               <NewsDetail/>
+            )}
+          /> 
+
+          <Route path="/alumni" render={ () => (
+              <ContactDetail/>
+            )}
+          /> 
+
+          <Route path="/login" render={ () => (
+              <Login/>
+            )}
+          /> 
+
+          <Route path="/signup" render={ () => (
+              <SignUp/>
             )}
           /> 
         </div>
